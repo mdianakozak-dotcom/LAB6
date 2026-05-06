@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Культура Кореї</title>
+    <link rel="icon" href="images/культура.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="style (2).css">
+    <style>
+    body {
+        background-color: #E6E6FA !important;
+    }
+</style>
+</head> 
+<body>
+    <div class="topBar">
+        <h1 style="margin-left: 20px;">👘Культура Кореї👘</h1>
+    </div>
+
+    <nav class="menu">
+        <a href="index.html">Головна</a>
+        <a href="culture.html">Культура</a>
+        <a href="food.html">Кухня</a>
+        <a href="dorama.html">Дорами</a>
+    </nav>
+
+    <main class="info-box">
+        <p style="text-align: center; font-size: 1.1em;">Культура Південної Кореї поєднує <i>давні традиції та сучасні тенденції</i>. Протягом століть на неї впливали філософія, релігія та унікальне мистецтво, що сформувало неповторний характер нації.</p>
+
+        <div class="culture-row">
+            <div class="culture-img-box">
+                <img src="images/hanbok.jpg.jpg" alt="Hanbok">
+            </div>
+            <div class="culture-text-box">
+                <h2 style="color: purple">Традиційний одяг: Ханбок</h2>
+                <p><strong>Hanbok</strong> — це не просто одяг, а справжній символ корейської ідентичності. Він вирізняється насиченими кольорами та витонченими лініями без кишень.</p>
+            </div>
+        </div>
+
+        <div class="culture-row reverse">
+            <div class="culture-img-box">
+                <img src="images/seollal.jpg.jpg" alt="Seollal">
+            </div>
+            <div class="culture-text-box">
+                <h2 style="color: red">Свята та традиції: Соллаль</h2>
+                <p>Одним із найважливіших свят є <strong>Seollal</strong> — корейський Новий рік за місячним календарем.</p>
+            </div>
+        </div>
+
+        <div class="culture-row">
+            <div class="culture-img-box">
+                <img src="images/k-pop.jpg.jpg" alt="K-pop">
+            </div>
+            <div class="culture-text-box">
+                <h2 style="color: blue">Сучасна культура: Халлю</h2>
+                <p>Сьогодні корейська культура відома на весь світ завдяки феномену <i><strong>K-pop</strong></i> та дорамам.</p>
+            </div>
+        </div>
+    </main>
+    
+   <section class="info-box" style="margin-top: 40px; border: 2px dashed purple; background: #fafafa; padding: 20px;">
+    <h2 style="text-align: center; color: purple;">Плануєш подорож до Кореї?</h2>
+    
+    <div style="max-width: 550px; margin: 0 auto;">
+        <div class="form-group">
+            <label>Коли хочеш поїхати?</label>
+            <select id="seasonSelect" style="padding: 10px; width: 100%; border-radius: 5px; border: 1px solid #ccc; margin-top: 5px;">
+                <option value="">-- Оберіть пору року --</option>
+                <option value="spring">Весна</option>
+                <option value="autumn">Осінь</option>
+                <option value="winter">Зима</option>
+            </select>
+        </div>
+
+        <div class="form-group" style="margin-top: 15px;">
+            <label>Твій рівень знання традицій:</label><br>
+            <input type="radio" name="level" value="beginner" checked> Новачок
+            <input type="radio" name="level" value="pro" style="margin-left: 10px;"> Знавець (Халлю-фанат)
+        </div>
+
+        <button type="button" class="btn-info" style="margin-top: 20px; width: 100%; padding: 12px; cursor: pointer;" onclick="getAdvice()">Отримати пораду</button>
+    </div>
+</section>
+
+<div id="adviceModal" class="modal-overlay" onclick="closeAdvice()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="close-btn" onclick="closeAdvice()">&times;</span>
+        <div id="adviceResult">
+            <div style="text-align: center; background: #f9f9f9; border-radius: 10px; overflow: hidden;">
+                <img id="adviceImg" src="" alt="Korea">
+            </div>
+            <p id="adviceText"></p>
+        </div>
+    </div>
+</div>
+    <footer style="text-align: center; padding: 20px; background: black; color: white;">
+        &copy; 2026 Discover Korea
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

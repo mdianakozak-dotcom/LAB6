@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>🍜Корейська кухня🍜</title>
+    <link rel="icon" href="images/кухня.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="style (2).css">
+</head>
+<body>
+    <div class="topBar food-bg">
+        <h1>🍜Корейська кухня🍜</h1>
+    </div>
+
+    <nav class="menu">
+        <a href="index.html">Головна</a>
+        <a href="culture.html">Культура</a>
+        <a href="food.html">Кухня</a>
+        <a href="dorama.html">Дорами</a>
+    </nav>
+
+    <div class="section">
+        <h2 style="text-align: center; font-size: 2 em;">🍙Популярні страви🍙</h2>
+        <p style="text-align: center; font-size: 1.1em;"><strong>Корейська кухня</strong> — це гармонія смаку, кольору та користі. Основу раціону складає рис, овочі та м'ясо. Головною особливістю є <strong>панчхан</strong> — велика кількість маленьких закусок, які подаються безкоштовно до основної страви.</p>
+
+        <!-- Форма фільтрації -->
+        <div class="filter-box">
+            <h3>Фільтрувати страви</h3>
+            <form id="filterForm">
+                <label>Категорія:
+                    <select id="categoryFilter">
+                        <option value="">Всі</option>
+                    </select>
+                </label>
+                
+                <label>Рівень гостроти:
+                    <select id="spicyFilter">
+                        <option value="">Будь-який</option>
+                        <option value="1">Малогострі</option>
+                        <option value="2">Середньої гостроти</option>
+                        <option value="3">Гострі</option>
+                    </select>
+                </label>
+
+                <button type="button" id="applyFilter" class="btn-info">Застосувати фільтр</button>
+                <button type="button" id="resetFilter" class="btn-info" style="background:#666;">Скинути</button>
+            </form>
+        </div>
+
+        <!-- Таблиця для динамічних даних -->
+        <div id="loading" style="text-align:center; padding:20px;">Завантаження даних...</div>
+        
+        <table class="food-table" id="foodsTable" style="display:none;">
+            <thead>
+                <tr>
+                    <th>Фото</th>
+                    <th>Назва страви</th>
+                    <th>Опис</th>
+                    <th>Категорія</th>
+                    <th>Гострота</th>
+                    <th>Ціна (₩)</th>
+                </tr>
+            </thead>
+            <tbody id="foodsBody">
+                <!-- Дані заповнюються через JavaScript -->
+            </tbody>
+        </table>
+
+        <div id="noData" style="display:none; text-align:center; padding:40px; color:#666;">
+            <p>За вибраними фільтрами нічого не знайдено 😔</p>
+        </div>
+
+        <!-- Залишаємо твій статичний блок етикету -->
+        <div class="etiquette-box">
+            <h3>🥢 Корейський етикет за столом</h3>
+            <p>Якщо ви обідаєте в Кореї, варто знати ці правила:</p>
+            <ul>
+                <li><strong>Повага до старших:</strong> Не починайте їсти, поки найстарша людина за столом не візьме ложку.</li>
+                <li><strong>Ложка чи палички?</strong> Для рису та супу використовують ложку, а палички — тільки для сухої їжі та гарнірів.</li>
+                <li><strong>Не тримайте тарілку:</strong> На відміну від Японії чи Китаю, у Кореї не прийнято піднімати тарілку з рисом під час їжі.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer style="text-align: center; padding: 20px; background: #333; color: white;">
+        &copy; 2026 Discover Korea
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

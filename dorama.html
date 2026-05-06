@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Дорами</title>
+    <link rel="icon" href="images/дорамии.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .error-msg { color: #cd2e3a; font-size: 12px; display: none; margin-bottom: 10px; font-weight: bold; }
+        .form-group { margin-bottom: 20px; display: flex; flex-direction: column; }
+        #resultArea { display: none; background: white; padding: 30px; border-radius: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .result-img { width: 250px; border-radius: 10px; margin: 15px 0; }
+    </style>
+    <style>
+        body {
+            background-image: url("images/дорам.jpg") !important;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="food-bg-body">
+    <div class="topBar"><h1 style="margin-left: 20px;">📺🎬Вибір дорами🎬📺</h1></div>
+
+    <nav class="menu">
+        <a href="index.html">Головна</a>
+        <a href="culture.html">Культура</a>
+        <a href="food.html">Кухня</a>
+        <a href="dorama.html">Дорами</a>
+    </nav>
+
+    <main class="info-box">
+        <form id="doramaForm" novalidate>
+            <h2 style="color: palevioletred;">✨Анкета глядача✨</h2>
+            
+            <div class="form-group">
+                <label>Ваше ім'я:</label>
+                <input type="text" name="userName" id="userName" placeholder="Тільки літери">
+                <span class="error-msg" id="nameError">Введіть ім'я літерами</span>
+            </div>
+
+            <div class="form-group">
+                <label>Улюблений колір:</label>
+                <input type="text" name="userColor" id="userColor" placeholder="Наприклад: Рожевий">
+                <span class="error-msg" id="colorError">Це поле не може бути порожнім</span>
+            </div>
+
+            <div class="form-group">
+                <label>Жанр дорами:</label>
+                <select name="genre" id="genre">
+                    <option value="">-- Оберіть --</option>
+                    <option value="romance">Романтика</option>
+                    <option value="thriller">Трилер</option>
+                    <option value="history">Історична</option>
+                </select>
+                <span class="error-msg" id="genreError">Оберіть жанр</span>
+            </div>
+
+            <div class="form-group">
+                <label>Коли дивитесь?</label>
+                <div>
+                    <input type="radio" name="timing" value="Ввечері" checked> Ввечері
+                    <input type="radio" name="timing" value="На вихідних"> На вихідних
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Додатково:</label>
+                <div>
+                    <input type="checkbox" name="feature" value="Хеппі-енд"> Хеппі-енд
+                    <input type="checkbox" name="feature" value="Багато серій"> Багато серій
+                </div>
+            </div>
+<button type="submit" class="btn-info" style="width: 100%; margin-top: 10px;">
+    Відправити анкету
+</button>
+        </form>
+
+        <div id="resultArea">
+    <h2 id="resTitle" style="color: palevioletred;"></h2>
+    <img src="" id="resImg" class="result-img" alt="Дорама">
+    <p id="resDesc"></p>
+    
+    <div id="formDataOutput" style="text-align: left; background: #f9f9f9; padding: 15px; border-radius: 8px; margin: 20px 0;"></div>
+    
+    </main>
+
+    <script src="form.js"></script>
+</body>
+</html>
